@@ -97,7 +97,7 @@
 .rating span:first-of-type {
     font-weight: 500;
     margin: 0 10px;
-    color: var(--primary-text-color);
+    color:  #1976d2;
 }
 
 .rating span:last-of-type {
