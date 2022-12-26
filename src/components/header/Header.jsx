@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Logo from '../../images/book1.png'
+import Logo from '../../images/Logo.png'
 import './Header.css'
 
 function Header() {

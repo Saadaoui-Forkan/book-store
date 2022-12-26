@@ -1,0 +1,43 @@
+.services {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.service-item {
+    padding: 7px;
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #2c3e50;
+    border: 1px solid gray;
+    width: 21%;
+    border-radius: 60px;
+}
+
+.service-item i {
+    font-size: 40px;
+}
+
+@media (max-width:992px){
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .service-item {
+        width: 185px;
+        margin: 10px;
+    }
+    b {
+        font-size: 17px;
+        font-weight: bold;
+    }
+}
+@media (max-width:768px) {
+    
+}
+
+
