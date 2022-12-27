@@ -40,4 +40,4 @@ const Rating = ({rating, reviews}) => {
     </div> );
 }
  
-export default Rating;
+export default Rating
