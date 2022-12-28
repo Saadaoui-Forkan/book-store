@@ -1,9 +1,14 @@
 import React,{useState} from 'react'
 import './BookSlider.css'
 import Rating from './Rating'
+import Modal from '../Modal/Modal'
 
 function BookSlider({data}) {
     const [slideIndex,setSlideIndex] = useState(0)
+    const [openModal,setOpenModal] = useState(false)
+    const [bookData,setBookData] = useState(null)
+
+    // Create the slider
     const handleClick = (direction) => {
         if (direction === "left") {
             setSlideIndex(slideIndex - 1)
@@ -11,6 +16,14 @@ function BookSlider({data}) {
             setSlideIndex(slideIndex + 1)
         }
     }
+
+    // Handle Modal
+    const HandleModal = (book) => {
+        setOpenModal(true)
+        setBookData(book)
+    }
+
+    // Handle Modal Click (Show Book Data)
   return (
     <div className='book-slider-container'>
         {
@@ -29,7 +42,7 @@ function BookSlider({data}) {
                         <Rating rating={item.rating} reviews={item.reviews} />
                         <div className="book-slider-item-price">${item.price}</div>
                         <div className="book-slider-icons-wrapper">
-                            <i className="bi bi-eye-fill"></i>
+                            <i className="bi bi-eye-fill" onClick={()=> HandleModal(item)}></i>
                             <i className="bi bi-cart-plus"></i>
                         </div>
                     </div>
@@ -43,6 +56,16 @@ function BookSlider({data}) {
             className="bi bi-chevron-right book-slider-arrow-right">
             </i>
         }
+
+        {
+            openModal 
+            && 
+            <Modal
+                setOpenModal = {setOpenModal}
+                bookData = {bookData}
+            />
+        }
+
     </div>
 
   )
