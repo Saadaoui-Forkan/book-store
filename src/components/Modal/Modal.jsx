@@ -3,7 +3,7 @@ import './Modal.css'
 import Rating from '../book-slider/Rating'
 
 function Modal({setOpenModal,bookData,rating,reviews}) {
-console.log(bookData);
+// console.log(bookData);
   return (
     <div className="modal-container">
       <div className="modal-content">

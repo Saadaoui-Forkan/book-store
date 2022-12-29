@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     display: flex;
     align-items: center;
@@ -114,4 +114,165 @@
     border-radius: 7px;
     color: white;
     font-weight: 600;
+}
+
+/* responsive design */
+
+
+@media (max-width:992px){
+    .modal-content {
+        width: 75%;
+        height: 84%;
+        border-radius: 10px;
+    }
+    .modal-icon {
+        font-size: 30px;
+    }
+    .modal-content-info-title {
+        font-size: 30px;
+    }
+    .modal-content-info-stock {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    .rating i {
+        font-size: 18px;
+    }
+    .modal-content-info-author {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .modal-content-info-price {
+        font-size: 18px;
+    }
+    .modal-add-to-cart {
+        margin: 20px 0;
+    }
+    .modal-add-to-cart-input {
+        font-size: 18px;
+        padding: 5px;
+        margin: auto 4px;
+    }
+    .modal-add-to-cart-btn {
+        padding: 8px;
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    .modal-content-info-link {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media (max-width:768px) {
+    .modal-content {
+        width: 80%;
+    }
+    .modal-content-img {
+        width: 50%;
+    }
+    .modal-content-info {
+        padding: 15px;
+        width: 50%;
+    }
+    .modal-content-info-title {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .modal-content-info-stock {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    b {
+        font-size: 15px;
+    }
+    .rating i {
+        font-size: 13px;
+        margin-right: 2px;
+    }
+    .rating span:first-of-type {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+    .rating span:last-of-type {
+        font-size: 12px;
+    }
+    .modal-content-info-author {
+        font-size: 16px;
+    }
+    .modal-content-info-price {
+        font-size: 16px;
+    }
+    .modal-add-to-cart-input {
+        font-size: 14px;
+        margin: 10px;
+    }
+    .modal-add-to-cart {
+        margin: 5px 0;
+    }
+    .modal-add-to-cart-btn {
+        font-size: 14px;
+    }
+    .modal-add-to-cart-btn i {
+        font-size: 19px;
+    }
+    .modal-content-info-link {
+        font-size: 15px;
+        margin-top: 31px;
+    }
+}
+@media (min-width:330px) and (max-width:575px) {
+    .modal-content {
+        width: 80%;
+        height: 90%;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .modal-icon {
+        font-size: 25px;
+    }
+    .modal-content-img {
+        width: 55%;
+        margin: auto;
+    }
+    .modal-content-img img {
+        height: 90%;
+    }
+    .modal-content-info {
+        padding: 0px;
+        width: 80%;
+    }
+    .modal-content-info-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .modal-content-info-stock {
+        text-align: center;
+    }
+    .modal-content-info-author {
+        font-size: 14px;
+    }
+    b {
+        font-size: 14px;
+    }
+    .modal-content-info-price {
+        font-size: 14px;
+    }
+    .modal-add-to-cart {
+        display: flex;
+        justify-content: space-between;
+    }
+    .modal-add-to-cart-btn i {
+        font-size: 16px;
+    }
+    .modal-add-to-cart-btn {
+        font-size: 10px;
+    }
+    .modal-add-to-cart-input {
+        margin: auto;
+    }
+    .modal-content-info-link {
+        font-size: 14px;
+        text-align: center;
+        margin: auto;
+    }
 }
