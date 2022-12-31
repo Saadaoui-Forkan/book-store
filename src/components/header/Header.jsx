@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState}from 'react'
+import {Link} from 'react-router-dom' 
 import Logo from '../../images/Logo.png'
 import './Header.css'
 
@@ -12,7 +13,7 @@ function Header() {
     const [toggle,setToggle] = useState('toggle-button')
     const [toggleLinks,setToggleLinks] = useState('navbar-links')
     const handleToggle = (e) =>{
-        e.preventDefault()
+        // e.preventDefault()
         toggle === 'toggle-button' 
         ? setToggle('toggle-button toggle-bars') 
         : setToggle('toggle-button')
@@ -28,11 +29,11 @@ function Header() {
                 <img src={Logo} alt="" className="logo" />
             </div>
             <ul className={toggleLinks}>
-                <li onClick={handleToggle}><a href="/">Home</a></li>
-                <li onClick={handleToggle}><a href="/">Authors</a></li>
-                <li onClick={handleToggle}><a href="/">About Us</a></li>
-                <li onClick={handleToggle}><a href="/">Contact Us</a></li>
-                <li onClick={handleToggle}><a href="/">Register</a></li>
+                <Link to="/" onClick={handleToggle} className='navLink'>Home</Link>
+                <Link to="/authors" onClick={handleToggle} className='navLink'>Authors</Link>
+                <Link to="/about" onClick={handleToggle} className='navLink'>About Us</Link>
+                <Link to="/contact" onClick={handleToggle} className='navLink'>Contact Us</Link>
+                <Link to="/register" onClick={handleToggle} className='navLink'>Register</Link>
             </ul>
         </nav>
         <div className="header-left">
@@ -46,11 +47,11 @@ function Header() {
                 <i className = "bi bi-cart-fill"></i>
             </div>
         </div>
-        <a href="/" className={toggle} onClick={handleToggle}>
+        <div className={toggle} onClick={handleToggle}>
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
-        </a>    
+        </div>    
     </div>
   )
 }

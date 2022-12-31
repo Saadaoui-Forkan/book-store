@@ -33,11 +33,9 @@ img.logo {
 .navbar-links {
     display: flex;
 }
-.navbar-links li {
+.navLink {
     list-style: none;
     margin: auto 10px;
-}
-.navbar-links li a {
     text-decoration: none;
     color: rgb(255, 250, 238);
     font-size: 15px;
@@ -48,7 +46,7 @@ img.logo {
     justify-content: space-between;
     align-items: center;
 }
-a.toggle-button {
+.toggle-button {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
@@ -115,7 +113,7 @@ a.toggle-button {
     }
 }
 @media (max-width:768px) {
-    a.toggle-button {
+    .toggle-button {
         display: block;
         position: absolute;
         left: 140px;
@@ -169,7 +167,7 @@ a.toggle-button {
         margin: auto 10px;
         font-size: 20px;
     }
-    a.toggle-button {
+    .toggle-button {
         left: 20px;
     }
     .search button {
