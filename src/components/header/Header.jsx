@@ -43,9 +43,9 @@ function Header() {
                     <i className="bi bi-search"></i>
                 </button>
             </form>
-            <div className="add-to-cart">
+            <Link to="/cart" className="add-to-cart">
                 <i className = "bi bi-cart-fill"></i>
-            </div>
+            </Link>
         </div>
         <div className={toggle} onClick={handleToggle}>
             <div className="bar"></div>

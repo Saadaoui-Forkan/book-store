@@ -8,6 +8,7 @@ import AuthorsPage from './pages/AuthorsPage';
 import ContactUsPage from './pages/AuthorsPage';
 import RegisterPage from './pages/RegisterPage';
 import BookPage from './pages/Book/BookPage';
+import CartPage from './pages/Cart/CartPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/contact' element={<ContactUsPage/>} />
           <Route path='/register' element={<RegisterPage/>} />
           <Route path='/book/:param' element={<BookPage/>} />
+          <Route path='/cart' element={<CartPage/>} />
         </Routes>
         <Footer />
     </BrowserRouter>
