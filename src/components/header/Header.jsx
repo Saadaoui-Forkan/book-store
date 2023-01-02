@@ -25,9 +25,9 @@ function Header() {
   return (
     <div className='header'>
         <nav className="navbar">
-            <div className="brand-title">
+            <Link to="/" className="brand-title">
                 <img src={Logo} alt="" className="logo" />
-            </div>
+            </Link>
             <ul className={toggleLinks}>
                 <Link to="/" onClick={handleToggle} className='navLink'>Home</Link>
                 <Link to="/authors" onClick={handleToggle} className='navLink'>Authors</Link>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Modal.css'
 import Rating from '../book-slider/Rating'
 
@@ -32,15 +33,16 @@ function Modal({setOpenModal,bookData,rating,reviews}) {
               type="number"
               min="1"
               max="100"
+              placeholder='0'
             />
             <button className="modal-add-to-cart-btn">
               <i className="bi bi-cart-plus"></i>
               Add To Cart
             </button>
           </div>
-          <div className="modal-content-info-link">
+          <Link to={`/book/${bookData.id}`} className="modal-content-info-link">
             See More Details
-          </div>
+          </Link>
         </div>
       </div>
     </div>

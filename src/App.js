@@ -7,6 +7,7 @@ import AboutUsPage from './pages/AboutUsPage'
 import AuthorsPage from './pages/AuthorsPage';
 import ContactUsPage from './pages/AuthorsPage';
 import RegisterPage from './pages/RegisterPage';
+import BookPage from './pages/Book/BookPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/authors' element={<AuthorsPage/>} />
           <Route path='/contact' element={<ContactUsPage/>} />
           <Route path='/register' element={<RegisterPage/>} />
+          <Route path='/book/:param' element={<BookPage/>} />
         </Routes>
         <Footer />
     </BrowserRouter>
