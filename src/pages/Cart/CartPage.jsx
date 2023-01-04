@@ -52,10 +52,10 @@ function CartPage() {
           <h5 className="order-summary-title">ORDER SUMMARY</h5>
           <div className="order-summary-item">
             <span>Subtotal</span>
-            {/* <span>
+            <span>
               $
               {cartInfo.reduce((acc, cur) => acc + cur.price * cur.quantity, 0).toFixed(2)}
-            </span> */}
+            </span>
           </div>
           <div className="order-summary-item">
             <span>Shipping Cost</span>
@@ -67,10 +67,10 @@ function CartPage() {
           </div>
           <div className="order-summary-item">
             <strong>Total</strong>
-            {/* <span>
+            <span>
               $
               {cartInfo.reduce((acc, cur) => acc + cur.price * cur.quantity, 0).toFixed(2)}
-            </span> */}
+            </span>
           </div>
         </div>
       </div>
