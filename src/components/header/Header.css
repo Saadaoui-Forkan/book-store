@@ -99,6 +99,21 @@ img.logo {
     margin: auto 20px;
     font-size: 25px;
     color: #fff;
+    position: relative;
+}
+.cart-notification {
+    position: absolute;
+    top: -7px;
+    right: -12px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
 }
 /* media query */
 @media (max-width:992px){

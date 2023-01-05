@@ -8,7 +8,14 @@ function CartProvider({children}) {
 
     // Add To Cart
     const addToCart = (item) =>{
-        setCartItems(prev => [...prev,item])
+        const isExist = cartItems.find((cartItem) => cartItem.id === item.id)
+        if (isExist) {
+            setCartItems(
+                cartItems.map((cartItem) => cartItem.id === item.id ? item : cartItem)
+            )
+        } else {
+            setCartItems(prev => [...prev,item])
+        }
     }
 
     // Remove From Cart
@@ -25,7 +32,8 @@ function CartProvider({children}) {
             {
                 cartItems,
                 addToCart,
-                removeFromCart
+                removeFromCart,
+                cartItemsLength : cartItems.length,
             }
         }
     >

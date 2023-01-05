@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { books } from '../../data/books'
 import Rating from '../../components/book-slider/Rating'
 import './BookPage.css'
+import CartContext from '../../context/CartContext'
 
 function BookPage() {
-    let {param} = useParams()
-    const book = books.find(b => b.id === parseInt(param))
-    window.scroll(0,0)
+
+  window.scroll(0,0)
+
+  // book link
+  let {param} = useParams()
+  const book = books.find(b => b.id === parseInt(param))
+
+  // add to cart using the global context
+  const {addToCart} = useContext(CartContext)
+  const [qty,setQty] = useState(1)
+    
   return (
     <div className="book">
       <div className="book-content">
@@ -28,8 +37,13 @@ function BookPage() {
               type="number"
               min="1"
               max="100"
+              value={qty}
+              onChange={(e)=>setQty(e.target.value)}
             />
-            <button className="book-add-to-cart-btn">
+            <button 
+            className="book-add-to-cart-btn"
+            onClick={()=>addToCart({...book,quantity:qty})}
+            >
               <i className="bi bi-cart-plus"></i>
               Add To Cart
             </button>

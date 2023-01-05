@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Modal.css'
 import Rating from '../book-slider/Rating'
+import CartContext from '../../context/CartContext'
 
 function Modal({setOpenModal,bookData,rating,reviews}) {
-// console.log(bookData);
+
+  // fetch data from the global context
+  const {addToCart} = useContext(CartContext)
+
+  const [qty,setQty] = useState(1)
   return (
     <div className="modal-container">
       <div className="modal-content">
@@ -33,9 +38,12 @@ function Modal({setOpenModal,bookData,rating,reviews}) {
               type="number"
               min="1"
               max="100"
-              placeholder='0'
+              value={qty}
+              onChange={(e)=>setQty(e.target.value)}
             />
-            <button className="modal-add-to-cart-btn">
+            <button className="modal-add-to-cart-btn" 
+              onClick={()=>addToCart({...bookData,quantity:qty})}>
+                
               <i className="bi bi-cart-plus"></i>
               Add To Cart
             </button>

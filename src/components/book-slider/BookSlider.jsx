@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import './BookSlider.css'
 import Rating from './Rating'
 import Modal from '../Modal/Modal'
+import CartContext from '../../context/CartContext'
 
 function BookSlider({data}) {
     const [slideIndex,setSlideIndex] = useState(0)
@@ -23,7 +24,9 @@ function BookSlider({data}) {
         setBookData(book)
     }
 
-    // Handle Modal Click (Show Book Data)
+    // fetch data from CartContext
+    const {addToCart} = useContext(CartContext)
+
   return (
     <div className='book-slider-container'>
         {
@@ -43,7 +46,10 @@ function BookSlider({data}) {
                         <div className="book-slider-item-price">${item.price}</div>
                         <div className="book-slider-icons-wrapper">
                             <i className="bi bi-eye-fill" onClick={()=> HandleModal(item)}></i>
-                            <i className="bi bi-cart-plus"></i>
+                            <i 
+                            className="bi bi-cart-plus"
+                            onClick={()=>addToCart({...item,quantity:1})}
+                            ></i>
                         </div>
                     </div>
                 ))

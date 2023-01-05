@@ -1,5 +1,6 @@
-import React,{useState}from 'react'
+import React,{useContext, useState}from 'react'
 import {Link} from 'react-router-dom' 
+import CartContext from '../../context/CartContext'
 import Logo from '../../images/Logo.png'
 import './Header.css'
 
@@ -13,7 +14,6 @@ function Header() {
     const [toggle,setToggle] = useState('toggle-button')
     const [toggleLinks,setToggleLinks] = useState('navbar-links')
     const handleToggle = (e) =>{
-        // e.preventDefault()
         toggle === 'toggle-button' 
         ? setToggle('toggle-button toggle-bars') 
         : setToggle('toggle-button')
@@ -22,6 +22,8 @@ function Header() {
         ? setToggleLinks('navbar-links active-navbar') 
         : setToggleLinks('navbar-links')
     }
+
+    const {cartItemsLength} = useContext(CartContext)
   return (
     <div className='header'>
         <nav className="navbar">
@@ -44,6 +46,9 @@ function Header() {
                 </button>
             </form>
             <Link to="/cart" className="add-to-cart">
+                {cartItemsLength > 0 && (
+                    <b className="cart-notification">{cartItemsLength}</b>
+                )}
                 <i className = "bi bi-cart-fill"></i>
             </Link>
         </div>
