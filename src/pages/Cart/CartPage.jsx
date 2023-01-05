@@ -5,6 +5,7 @@ import CartContext from '../../context/CartContext'
 function CartPage() {
 
   const {cartItems,cartItemsLength,removeFromCart,addToCart} = useContext(CartContext)
+  
   return (
     <div className="cart">
       <h1 className="cart-title">Your Shopping Cart</h1>
@@ -38,7 +39,7 @@ function CartPage() {
                     <div className="cart-item-quantity">
                       <button
                         className="bi bi-plus-lg"
-                        onClick={() => addToCart({...item,quantity:item.quantity+1})}
+                        onClick={() => addToCart({...item,quantity:parseInt(item.quantity)+1})}
                       ></button>
                       <b>{item.quantity}</b>
                       <button

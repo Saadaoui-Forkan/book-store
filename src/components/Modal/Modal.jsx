@@ -43,7 +43,6 @@ function Modal({setOpenModal,bookData,rating,reviews}) {
             />
             <button className="modal-add-to-cart-btn" 
               onClick={()=>addToCart({...bookData,quantity:qty})}>
-                
               <i className="bi bi-cart-plus"></i>
               Add To Cart
             </button>
