@@ -1,27 +1,51 @@
 import { Link } from "react-router-dom";
 import "./forms.css";
 import { useState } from "react";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
 
+    const [email,setEmail] = useState("")
+    const [username,setUsername] = useState("")
+    const [password,setPassword] = useState("")
+
+    // form submit handler
+    const formSubmitHandler = (e) => {
+        e.preventDefault()
+        if (email.trim() === "") {
+            return toast.error("Email is required")
+        }
+        if (password === "") {
+            return toast.error("Password is required")
+        }
+        if (username.trim() === "") {
+            return toast.error("Username is required")
+        }
+    }
+
   return (
     <div className="form-wrapper">
-      {/* <ToastContainer /> */}
+      <ToastContainer theme="colored"/>
       <h1 className="form-title">Create new account</h1>
-      <form  className="form">
+      <form onSubmit={formSubmitHandler}  className="form">
         <input
-          type="email"
-          placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Email"
         />
         <input
-          type="text"
-          placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+            placeholder="Username"
         />
         <input
-          type="password"
-          placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            placeholder="Password"
         />
         <button className="form-btn" type="submit">
           Register

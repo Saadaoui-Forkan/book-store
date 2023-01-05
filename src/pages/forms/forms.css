@@ -33,7 +33,7 @@
 
 .form-btn {
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: blue;
     color: white;
     cursor: pointer;
     border-radius: 60px;

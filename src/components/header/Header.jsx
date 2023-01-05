@@ -35,7 +35,7 @@ function Header() {
                 <Link to="/authors" onClick={handleToggle} className='navLink'>Authors</Link>
                 <Link to="/about" onClick={handleToggle} className='navLink'>About Us</Link>
                 <Link to="/contact" onClick={handleToggle} className='navLink'>Contact Us</Link>
-                <Link to="/register" onClick={handleToggle} className='navLink'>Register</Link>
+                <Link to="/register" onClick={handleToggle} className='navLink'>connection</Link>
             </ul>
         </nav>
         <div className="header-left">
