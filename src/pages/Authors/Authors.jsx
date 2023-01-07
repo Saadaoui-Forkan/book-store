@@ -3,9 +3,9 @@ import { authors } from "../../data/authors";
 import "./Authors.css";
 
 const Authors = () => {
-  const [search, setSearch] = useState("");
+  window.scroll(0,0)
 
-  //console.log(authors.filter(a => a.name.toLowerCase().includes(search)));
+  const [search, setSearch] = useState("");
 
   return (
     <section className="authors">

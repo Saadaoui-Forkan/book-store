@@ -1,9 +1,10 @@
 .authors {
-   margin-top: 100px;
+    margin-top: 140px;
 }
 
 .authors-search-wrapper {
-    margin-bottom: 30px;
+    margin: 10px auto 25px;
+    width: 60%;
 }
 
 .authors-search-wrapper input {
@@ -39,4 +40,18 @@
     height: 300px;
     object-fit: cover;
     border-radius: 7px;
+}
+@media (max-width:992px) {
+    .author {
+        width: 300px;
+        height: auto;
+    }
+}
+@media (max-width:768px) {
+    .authors {
+        margin-top: 80px;
+    }
+    .authors-search-wrapper {
+        width: 75%;
+    }
 }
