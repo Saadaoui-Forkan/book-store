@@ -1,4 +1,5 @@
 import "./about.css";
+import '../../App.css'
 
 const About = () => {
   return (
