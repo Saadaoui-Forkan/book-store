@@ -1,24 +1,25 @@
 .footer {
     padding: 10px 30px;
-    background-color: #7451eb;
+    border-top: 1px solid #444;
+    margin: 50px auto;
+    overflow-x: hidden;
 }
-
 /* Footer Social Media */
 .footer-social-media {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #666;
     padding: 10px;
     padding-bottom: 20px;
 }
-
 .footer-social-medai-text {
-    color: #efefef;
     font-size: 15px;
     font-weight: bold;
+    color: #444;
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 10px;
 }
-
 .footer-social-media-icons {
     display: flex;
     align-items: center;
@@ -31,7 +32,6 @@
     height: 50px;
     border-radius: 50%;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     cursor: pointer;
     line-height: 50px;
@@ -55,36 +55,44 @@
 }
 
 .footer-links-item-title {
-    color: white;
-    font-size: 21px;
+    font-size: 17px;
     font-weight: 700;
-    border-bottom: 3px solid white;
     width: max-content;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    color: #666;
 }
-
 .footer-links {
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-link {
-    font-size: 20px;
-    color: #efefef;
+    font-size: 15px;
     margin-bottom: 10px;
     cursor: pointer;
     list-style: none;
+    color: #444;
 }
 
 .footer-address-item {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #efefef;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #444;
 }
 
 .footer-address-item i {
-   font-size: 27px;
-   margin-right: 5px;
+    font-size: 24px;
+    margin-right: 5px;
+    color: #27ae60;
+}
+.copyright {
+    text-align: center;
+}
+.copyright p {
+    font-size: 14px;
+    color: #666;
 }
 
 /* media query */
@@ -95,60 +103,68 @@
         line-height: 40px;
     }
     .footer-social-media-icon i {
-        font-size: 25px;
+        font-size: 22px;
         margin: auto;
     }
     .footer-links-item-title {
-        font-size: 18px;
+        font-size: 15px;
     }
     .footer-link {
-        font-size: 15px;
+        font-size: 12px;
     }
     .footer-address-item {
-        font-size: 15px;
+        font-size: 12px;
     }
     .footer-address-item i {
-        font-size: 22px;
+        font-size: 18px;
+    }
+    .copyright p {
+        font-size: 12px;
     }
 }
 @media (max-width:768px) {
     .footer-links-item {
         width: 40%;
     }
+    .footer-social-medai-text {
+        font-size: 11px;
+        padding: 5px;
+        text-align: center;
+    }
 }
 @media (min-width:330px) and (max-width:575px) {
-    .footer-social-media {
-        flex-direction: column;
-    }
-    .footer-social-medai-text {
-        font-size: 14px;
-        margin: 14px auto;
-    }
-    .footer-social-media-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-    }
-    .footer-social-media-icon i {
-        font-size: 20px;
-    }
-    .footer-links-item-title {
-        font-size: 14px;
-        border-bottom: 2px solid white;
-    }
-    .footer-link {
-        font-size: 12px;
-    }
-    .footer-address-item {
-        font-size: 12px;
-    }
-    .footer-address-item i {
-        font-size: 12px;
-    }
     .footer-links-wrapper {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
     }
     .footer-links-item {
-        width: 47%;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-links-item:last-child {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-social-media {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        justify-content: space-between;
+    }
+    .footer-social-medai-text {
+        width: 40%;
+    }
+    .footer-social-media-icons {
+        width: 60%;
+        margin-left: 10px;
+    }
+    .footer-social-media-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        margin: auto 4px;
     }
 }

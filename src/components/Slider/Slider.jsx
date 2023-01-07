@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './Slider.css'
+import '../../App.css'
 import FirstBook from "../../images/book1.png";
 import SecondBook from "../../images/book2.png";
 import ThirdBook from "../../images/book3.png";

@@ -1,4 +1,5 @@
 import './Header.css'
+import '../../App.css'
 import HeaderBottom from './HeaderBottom'
 import HeaderTop from './HeaderTop'
 

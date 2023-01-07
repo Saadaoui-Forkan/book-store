@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #7451eb;
+    background-color: #666;
     color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -76,7 +76,6 @@
 .slide-info-wrapper {
     width: 50%;
     margin: auto 30px;
-    font-family: Inter, Inter-Bold;
 }
 
 .slide-info-title {
@@ -87,7 +86,7 @@
     margin: 21px 0;
     font-size: 24px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 @media (max-width:992px){
@@ -97,6 +96,12 @@
     }
     .slide-info-title {
         font-size: 32px;
+    }
+    .slide-image-wrapper {
+        margin: auto 10px auto 65px;
+    }
+    .slide-info-wrapper {
+        margin: auto 10px;
     }
 }
 @media (max-width:768px) {

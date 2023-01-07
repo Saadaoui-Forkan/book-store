@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Footer.css'
+import '../../App.css'
 
 function Footer() {
+  let date =  new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="footer-social-media">
@@ -28,11 +31,10 @@ function Footer() {
         <div className="footer-links-item">
           <h3 className="footer-links-item-title">Usefull Links</h3>
           <ul className="footer-links">
-            <li className="footer-link">Home</li>
-            <li className="footer-link">Authors</li>
-            <li className="footer-link">Blog</li>
-            <li className="footer-link">About Us</li>
-            <li className="footer-link">Contact Us</li>
+            <Link to="/" className="footer-link">Home</Link>
+            <Link to="/authors" className="footer-link">Authors</Link>
+            <Link to="/about"  className="footer-link">About Us</Link>
+            <Link to="/contact" className="footer-link">Contact Us</Link>
           </ul>
         </div>
         <div className="footer-links-item">
@@ -52,6 +54,11 @@ function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="copyright">
+        <p>
+          Saadaoui_Forkan © <span>{date}</span> All rights reserved
+        </p>
       </div>
     </footer>
   )

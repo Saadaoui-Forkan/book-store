@@ -1,5 +1,6 @@
 import React,{useContext, useState} from 'react'
 import './BookSlider.css'
+import '../../App.css'
 import Rating from './Rating'
 import Modal from '../Modal/Modal'
 import CartContext from '../../context/CartContext'

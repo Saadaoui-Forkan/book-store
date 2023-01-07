@@ -1,12 +1,11 @@
 .book-slider-container {
-    width: 100%;
-    height: calc(100vh - 100px);
+    width: 85%;
     display: flex;
     position: relative;
     overflow-x: hidden;
-    /* margin-bottom: 60px; */
     background-color: white;
     padding: 10px 20px 20px 20px;
+    margin-left: 7.5%;
 }
 
 .book-slider-arrow-left,
@@ -16,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #222;
+    background-color: #666;
     color: #fff;
     border-radius: 5px;
     position: absolute;
@@ -30,11 +29,11 @@
 }
 
 .book-slider-arrow-left {
-    left: 10px;
+    left: 0;
 }
 
 .book-slider-arrow-right {
-    right: 10px;
+    right: 0;
 }
 
 .book-slider-wrapper {
@@ -47,7 +46,7 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     background-color: snow;
     margin: 0 10px;
-    width: 330px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,15 +94,24 @@
 }
 
 .rating span:first-of-type {
-    font-weight: 500;
     margin: 0 10px;
-    color:  #1976d2;
+    color: #1976d2;
+    font-size: 11px;
 }
 
 .rating span:last-of-type {
     color: gray;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
+}
+
+/* responsive */
+@media (max-width:992px){
+    .book-slider-arrow-left, .book-slider-arrow-right {
+        width: 40px;
+        height: 60px;
+        font-size: 20px;
+    }
 }
 
 @media (min-width:330px) and (max-width:575px) {
