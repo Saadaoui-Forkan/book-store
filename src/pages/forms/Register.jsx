@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import "./forms.css";
+import '../../App.css'
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  window.scroll(0,0)
 
     const [email,setEmail] = useState("")
     const [username,setUsername] = useState("")

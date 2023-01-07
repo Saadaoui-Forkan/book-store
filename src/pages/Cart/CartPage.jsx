@@ -1,14 +1,18 @@
 import React, { useContext } from 'react'
 import './CartPage.css'
+import '../../App.css'
 import CartContext from '../../context/CartContext'
+import HeadingTitle from '../../components/heading-title/HeadingTitle'
 
 function CartPage() {
+
+  window.scroll(0,0)
 
   const {cartItems,cartItemsLength,removeFromCart,addToCart} = useContext(CartContext)
   
   return (
     <div className="cart">
-      <h1 className="cart-title">Your Shopping Cart</h1>
+      <HeadingTitle title="Your Shopping Cart" />
       <div className="cart-wrapper">
         <div className="cart-items">
           {
@@ -25,7 +29,7 @@ function CartPage() {
                   className="cart-item-img"
                 />
                 <div className="cart-item-info">
-                  <div>
+                  <div className='cart-item-info-container'>
                     <div className="cart-item-book-title">
                       <b>Title: </b>
                       {item.title}
@@ -35,7 +39,7 @@ function CartPage() {
                       {item.author}
                     </div>
                   </div>
-                  <div>
+                  <div className='cart-item-info-handler'>
                     <div className="cart-item-quantity">
                       <button
                         className="bi bi-plus-lg"
