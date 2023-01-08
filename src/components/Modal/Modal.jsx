@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Modal.css'
+import '../../App.css'
 import Rating from '../book-slider/Rating'
 import CartContext from '../../context/CartContext'
 
-function Modal({setOpenModal,bookData,rating,reviews}) {
+function Modal({setOpenModal,bookData}) {
 
   // fetch data from the global context
   const {addToCart} = useContext(CartContext)
@@ -47,9 +48,12 @@ function Modal({setOpenModal,bookData,rating,reviews}) {
               Add To Cart
             </button>
           </div>
-          <Link to={`/book/${bookData.id}`} className="modal-content-info-link">
-            See More Details
-          </Link>
+          <div className="modal-content-info-link-container">
+            <Link to={`/book/${bookData.id}`} className="modal-content-info-link">
+              See More Details
+            </Link>
+          </div>
+          
         </div>
       </div>
     </div>
