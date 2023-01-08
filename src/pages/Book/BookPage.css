@@ -1,5 +1,5 @@
 .book {
-    margin-top: 90px;
+    margin-top: 150px;
 }
 
 .book-content {
@@ -43,37 +43,41 @@
 
 .book-add-to-cart-input {
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 21px;
     font-weight: 600;
     padding: 5px 10px;
+    border: 1px solid #07bc0c;
 }
 
 .book-add-to-cart-btn {
-    border: 1px solid green;
+    border: 1px solid var(--green);
     border-radius: 7px;
     padding: 5px 10px;
     cursor: pointer;
     background-color: transparent;
-    color: green;
+    color: var(--green);
     font-size: 21px;
     font-weight: 600;
     transition: all .3s ease-in-out;
 }
 
 .book-add-to-cart-btn:hover{
-    background-color: aquamarine;
+    background-color: var(--green);
+    color: #fff;
 }
 
 .book-description {
     width: 80%;
     font-size: 21px;
     line-height: 1.8;
+    margin: auto 20px;
 }
 
 .book-icons {
     margin: 30px 0;
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .book-icon {
@@ -95,3 +99,90 @@
     margin: 5px 0;
 }
 
+/* Media Queries */
+@media(max-width: 992px) {
+    .book-description {
+        font-size: 17px;
+    }
+    .book-add-to-cart-btn {
+        font-size: 17px;
+    }
+    .book-add-to-cart-input {
+        font-size: 17px;
+    }
+    .book-title {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 768px) {
+    .book {
+        margin-top: 70px;
+    }
+    .book-content-img {
+        width: 35%;
+        height: auto;
+    }
+    .book-title {
+        font-size: 20px;
+    }
+    .book-author {
+        font-size: 18px;
+    }
+    .book-icon {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 330px) and (max-width: 575px) {
+    .book-content {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        flex-direction: column;
+    }
+    .book-content-img {
+        width: 60%;
+        height: auto;
+        margin: 5px auto;
+    }
+    .book-content-info {
+        width: 80%;
+        margin: auto;
+    }
+    .book-title {
+        font-size: 17px;
+        text-align: center;
+    }
+    .book-author {
+        font-size: 15px;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .book-add-to-cart {
+        margin: 15px auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .book-add-to-cart-input, .book-add-to-cart-btn {
+        font-size: 14px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .book-description {
+        font-size: 14px;
+        width: 90%;
+        margin: auto;
+    }
+    .book-icon {
+        font-size: 13px;
+        margin: auto;
+    }
+    .book-icon i {
+        font-size: 23px;
+        margin: 5px 0;
+    }
+    .book-icon b {
+        font-size: 10px;
+    }
+}

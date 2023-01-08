@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { books } from '../../data/books'
 import Rating from '../../components/book-slider/Rating'
 import './BookPage.css'
+import '../../App.css'
 import CartContext from '../../context/CartContext'
 
 function BookPage() {
