@@ -5,6 +5,10 @@ import CartContext from './CartContext'
 function CartProvider({children}) {
 
     const [cartItems,setCartItems] = useState ([])
+    const [searchBooks,setSearchBooks] = useState("")
+
+    const [openModal,setOpenModal] = useState(false)
+    const [bookData,setBookData] = useState(null)
 
     // Add To Cart
     const addToCart = (item) =>{
@@ -24,6 +28,23 @@ function CartProvider({children}) {
         setCartItems(cart)
     }
 
+    // Search Book
+    const searchTitleBook = (data) => {
+        const searched = data.filter(book => book.title.toLowerCase().includes(searchBooks))
+        return searched
+    }
+
+    // Handle Change Books
+    const handleChange = (event) =>{
+        setSearchBooks(event.target.value)
+    }
+
+    // Handle Modal
+    const HandleModal = (book) => {
+        setOpenModal(true)
+        setBookData(book)
+    }
+
   return (
     <CartContext.Provider
      value
@@ -34,6 +55,13 @@ function CartProvider({children}) {
                 addToCart,
                 removeFromCart,
                 cartItemsLength : cartItems.length,
+                handleChange,
+                searchTitleBook,
+                searchBooks,
+                HandleModal,
+                openModal,
+                setOpenModal,
+                bookData,
             }
         }
     >

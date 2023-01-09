@@ -7,8 +7,6 @@ import CartContext from '../../context/CartContext'
 
 function BookSlider({data}) {
     const [slideIndex,setSlideIndex] = useState(0)
-    const [openModal,setOpenModal] = useState(false)
-    const [bookData,setBookData] = useState(null)
 
     // Create the slider
     const handleClick = (direction) => {
@@ -19,14 +17,8 @@ function BookSlider({data}) {
         }
     }
 
-    // Handle Modal
-    const HandleModal = (book) => {
-        setOpenModal(true)
-        setBookData(book)
-    }
-
     // fetch data from CartContext
-    const {addToCart} = useContext(CartContext)
+    const {addToCart,HandleModal,openModal,bookData,setOpenModal} = useContext(CartContext)
 
   return (
     <div className='book-slider-container'>

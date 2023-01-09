@@ -1,0 +1,16 @@
+.search-page{
+    margin: 150px auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.book-slide-item {
+    margin: 10px;
+}
+
+@media (max-width:768px) {
+    .search-page{
+        margin: 70px auto 15px;
+    }
+}

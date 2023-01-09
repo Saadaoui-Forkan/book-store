@@ -10,8 +10,11 @@ import BookPage from './pages/Book/BookPage';
 import CartPage from './pages/Cart/CartPage';
 import Login from './pages/forms/Login';
 import Register from './pages/forms/Register';
+import Search from './pages/search/Search';
 
 function App() {
+  
+
   return (
     <BrowserRouter>
         <Header />
@@ -24,6 +27,7 @@ function App() {
           <Route path='/cart' element={<CartPage/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
     </BrowserRouter>

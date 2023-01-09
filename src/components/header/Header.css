@@ -60,20 +60,21 @@
     height: 100%;
     width: 100%;
     text-transform: none;
-    color: var(--black);
 }
 .search-btn {
-    background-color: transparent;
     border: none;
-    color: var(--black);
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     font-size: 20px;
     cursor: pointer;
+    background-color: var(--dark-color);
+    padding: 10px;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #fff;
 }
 .inputSearch:focus{
-    border: 2px solid #219150;
+    border: 2px solid rgba(0,0,0,0.4);
 }
 .navbar-links {
     display: flex;
@@ -125,7 +126,8 @@
         height: 4rem;
     }
     .search-btn {
-        top: 4px;
+        top: 0px;
+        padding: 4px 8px;
     }
     .header-bottom {
         position: fixed;
@@ -152,6 +154,10 @@
         transform: translateX(-50%);
         left: 50%;
         transition: all 0.3s ease-in-out;
+    }
+    .inputSearch{
+        background: rgba(0,0,0,0.4);
+        color: #fff;
     }
     .nav-icon {
         margin: 10px 15px;

@@ -5,7 +5,7 @@ import './Header.css'
 
 function HeaderTop() {
 
-    const {cartItemsLength} = useContext(CartContext)
+    const {cartItemsLength,handleChange,searchBooks} = useContext(CartContext)
 
     const [search,setSearch] = useState("search")
     const handleClick = () =>{
@@ -20,11 +20,18 @@ function HeaderTop() {
         </Link>
 
         <form  className={search}>
-            <input type="text" className="inputSearch" placeholder='search here...'/>
-            <button type='button' className='search-btn' >
+            <input 
+                value={searchBooks}
+                onChange = {handleChange}
+                type="text" 
+                className="inputSearch" 
+                placeholder='search here...'
+            />
+
+            <Link to="/search" type='button' className='search-btn' >
                 <i className="bi bi-search"></i>
-            </button>
-            </form>
+            </Link>
+        </form>
 
         <Link to="/cart" className="add-to-cart">
             {cartItemsLength > 0 && (

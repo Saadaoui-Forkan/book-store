@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <div className='header'>
-        <HeaderTop />
+        <HeaderTop  />
         <HeaderBottom />
     </div>
   )
